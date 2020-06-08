@@ -4,13 +4,20 @@ server:
     session:
       cookie:
         name: UISESSIONCOUPON
+#security:
+#  oauth2:
+#    client:
+#      client-id: CouponSystem
+#      client-secret: 12345
+#      access-token-uri: http://localhost:8080/oauth/token
+#      user-authorization-uri: http://localhost:8080/oauth/authorize
+#    resource:
+#      user-info-uri: http://localhost:8080/user/me
 
-security:
-  oauth2:
-    client:
-      client-id: CouponSystem
-      client-secret: 12345
-      access-token-uri: http://localhost:8080/oauth/token
-      user-authorization-uri: http://localhost:8080/oauth/authorize
-    resource:
-      user-info-uri: http://localhost:8080/user/me
+zlt:
+  sso:
+    client-id: CouponSystem
+    client-secret: 12345
+    redirect-uri: http://10.0.12.96:8060/singleLogin/callback.html
+    access-token-uri: http://10.0.12.158:8080/oauth/token
+#    user-info-uri: http://10.0.12.158:9900/api-user/users/current
